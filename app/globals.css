@@ -220,3 +220,8 @@ a{color:inherit;text-decoration:none}.cream{background:var(--cream)}.navy{backgr
 .live>h2{position:relative;z-index:2}
 .liveRule{position:relative;z-index:2}
 @media(max-width:900px){.liveTop{min-height:390px}.stageProof{left:12%;right:auto;top:120px;width:72vw;height:240px}.stageAside{position:relative;z-index:2}.live>h2{margin-top:35px}}
+
+/* Refinement 04 — stronger, fewer photographs */
+.lifeStrip{grid-template-columns:1.35fr .65fr;gap:14px}
+.lifeStrip figure:nth-child(2){margin-top:72px}
+@media(max-width:900px){.lifeStrip{grid-template-columns:1fr}.lifeStrip figure:nth-child(1){margin-right:8vw}.lifeStrip figure:nth-child(2){margin:0 0 0 15vw}}
