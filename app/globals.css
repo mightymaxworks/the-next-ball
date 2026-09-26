@@ -90,3 +90,41 @@ a{color:inherit;text-decoration:none}.cream{background:var(--cream)}.navy{backgr
  .ghostBall{opacity:1}
  .finalLanding{background:var(--lime);border:0}
 }
+
+
+/* V2 Act II — philosophy gives way to the human story */
+.ideaToHuman{min-height:72vh;padding:12vh 7vw 10vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;border-top:1px solid rgba(19,32,51,.12)}
+.ideaToHuman:after{content:"";position:absolute;right:16%;top:0;height:100%;border-left:1px solid rgba(19,32,51,.11)}
+.bridgeSmall{margin:0 0 20px;font-size:11px;font-weight:900;letter-spacing:.18em}
+.ideaToHuman h2{position:relative;z-index:2;margin:0;font-size:clamp(82px,11vw,164px);line-height:.76;letter-spacing:-.08em}
+.ideaToHuman h2 em{font-family:Georgia,serif;font-weight:400}
+.bridgeNote{position:absolute;right:7vw;bottom:14%;margin:0;font:italic clamp(20px,2vw,30px)/1.2 Georgia,serif;transform:rotate(-2deg)}
+.bridgeLine{position:absolute;left:55%;top:56%;width:30%;border-top:2px solid var(--navy);transform:rotate(7deg);transform-origin:left}
+
+.darren{position:relative;border-top:1px solid rgba(19,32,51,.12)}
+.darren:before{content:"";position:absolute;left:0;right:0;top:42%;border-top:1px solid rgba(19,32,51,.08);pointer-events:none}
+.darren .copy{position:relative;z-index:2}
+.path{position:relative}
+.obviously{font:italic 18px Georgia,serif;font-weight:400;transform:rotate(-5deg);margin-left:8px;white-space:nowrap}
+.photoWrap{isolation:isolate}
+.photoWrap:after{content:"";position:absolute;inset:0;border:1px solid rgba(19,32,51,.12);pointer-events:none}
+.photoLabel{position:absolute;z-index:3;left:18px;top:18px;background:var(--cream);padding:8px 10px;font-size:9px;font-weight:900;letter-spacing:.14em}
+.photoCut{position:absolute;z-index:3;left:-1px;top:56%;width:44%;border-top:3px solid var(--lime)}
+.photoCaption{position:absolute;z-index:3;right:18px;bottom:18px;margin:0;max-width:260px;background:var(--navy);color:var(--white);padding:16px 18px;font:italic 17px/1.25 Georgia,serif}
+
+/* Let the travelling ball feel embedded in the page rather than pasted over it. */
+.principle,.ideaToHuman,.darren{isolation:isolate}
+.principle h2,.principle h3,.ideaToHuman h2,.darren .copy{position:relative;z-index:15}
+.principle .quote,.principle .aside,.principle .textLink{position:relative;z-index:15}
+
+@media(max-width:900px){
+ .ideaToHuman{min-height:68vh;padding:110px 22px 80px}
+ .ideaToHuman h2{font-size:20vw}
+ .ideaToHuman:after{right:24%}
+ .bridgeNote{right:22px;bottom:12%;font-size:18px;max-width:180px;text-align:right}
+ .bridgeLine{left:36%;top:59%;width:52%}
+ .darren:before{top:58%}
+ .obviously{font-size:16px;margin-left:0}
+ .photoLabel{font-size:8px}
+ .photoCaption{font-size:15px;max-width:220px}
+}
