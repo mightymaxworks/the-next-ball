@@ -100,19 +100,19 @@ export default function Home() {
         <div className="perspectivePlay player">
           <div className="playNumber">01</div>
           <div className="playCopy"><p className="eyebrow">PLAYER</p><h3>WHAT DO I DO<br/>WITH THE BALL<br/><em>I’VE BEEN GIVEN?</em></h3></div>
-          <div className="playVisual courtDiagram playerCourt" aria-hidden="true"><span className="courtNet"/><span className="kitchen top"/><span className="kitchen bottom"/><span className="courtPlayer near">●</span><span className="paddle nearPaddle">◐</span><span className="shotLine"/><span className="landingSpot">×</span><span className="diagramNote">YOUR BALL. YOUR DECISION.</span></div>
+          <div className="playVisual courtDiagram playerCourt" aria-hidden="true"><span className="courtNet"/><span className="kitchen top"/><span className="kitchen bottom"/><span className="courtPlayer near">●</span><span className="paddle nearPaddle">◐</span><span className="shotLine"/><span className="landingSpot">×</span></div>
         </div>
 
         <div className="perspectivePlay coach">
           <div className="playNumber">02</div>
           <div className="playCopy"><p className="eyebrow">COACH</p><h3>HOW DO I HELP<br/>SOMEBODY ELSE<br/><em>SEE THE COURT?</em></h3></div>
-          <div className="playVisual courtDiagram coachCourt" aria-hidden="true"><span className="courtNet"/><span className="kitchen top"/><span className="kitchen bottom"/><span className="courtPlayer coachMark">●</span><span className="courtPlayer athleteMark">●</span><span className="sightCone"/><span className="landingSpot">×</span><span className="diagramNote">HELP THEM SEE THE OPEN COURT.</span></div>
+          <div className="playVisual courtDiagram coachCourt" aria-hidden="true"><span className="courtNet"/><span className="kitchen top"/><span className="kitchen bottom"/><span className="courtPlayer coachMark">●</span><span className="courtPlayer athleteMark">●</span><span className="sightCone"/><span className="landingSpot">×</span></div>
         </div>
 
         <div className="perspectivePlay entrepreneur">
           <div className="playNumber">03</div>
           <div className="playCopy"><p className="eyebrow">ENTREPRENEUR</p><h3>WHAT HAPPENS<br/>WHEN THE PLAN<br/><em>MEETS REALITY?</em></h3></div>
-          <div className="playVisual decisionDiagram" aria-hidden="true"><div className="decisionPlan"><small>THE PLAN</small><span className="planArrow">→</span><b>EXPECTED</b></div><div className="realityHit"><span>×</span><small>REALITY</small></div><div className="decisionResponse"><span className="turnArrow">↘</span><b>ADAPT</b></div><p>Plans are useful.<br/>Until reality gets a vote.</p></div>
+          <div className="playVisual decisionDiagram" aria-hidden="true"><div className="decisionPlan"><small>THE PLAN</small><span className="planArrow">→</span><b>EXPECTED</b></div><div className="realityHit"><span>×</span><small>REALITY</small></div><div className="decisionResponse"><span className="turnArrow">↘</span><b>ADAPT</b></div></div>
         </div>
 
         <div className="perspectivePlay investor">
@@ -132,7 +132,7 @@ export default function Home() {
         <div className="liveTop">
           <p className="eyebrow light">THE NEXT BALL — LIVE</p>
           <p className="stageAside">The ideas are serious.<br/>The delivery doesn’t have to be.</p>
-          <figure className="livePhoto"><img src="/images/selected/IMG_8932.JPEG" alt="Darren speaking at a live event" /><figcaption>THE NEXT BALL — LIVE</figcaption></figure>
+          <figure className="livePhoto"><img src="/images/selected/IMG_8932.JPEG" alt="Darren speaking at a live event" /></figure>
         </div>
         <h2>SERIOUS IDEAS.<br /><span>NOT-SO-SERIOUS<br />DELIVERY.</span></h2>
         <div className="liveRule" aria-hidden="true"><span>LAUGH</span><i>→</i><span>STORY</span><i>→</i><span>INSIGHT</span><i>→</i><span>NEXT BALL</span></div>
