@@ -9,32 +9,61 @@ a{color:inherit;text-decoration:none}.cream{background:var(--cream)}.navy{backgr
 .ball{display:inline-block;width:46px;height:46px;border-radius:50%;background:var(--lime);position:relative;box-shadow:inset -8px -8px 0 rgba(19,32,51,.06)}
 .ball:after{content:"";position:absolute;inset:8px;border-radius:50%;background-image:radial-gradient(circle,var(--navy) 1.3px,transparent 1.7px);background-size:9px 9px;opacity:.35}
 .navBall{width:12px;height:12px}.navBall:after{display:none}
-.hero{height:100svh;min-height:760px;padding:150px 7vw 60px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .eyebrow{font-size:12px;letter-spacing:.16em;font-weight:900;margin:0 0 26px}.light{color:rgba(255,254,248,.62)}
+
+/* V2 opening — the page behaves like a court, not a brochure */
+.hero{height:100svh;min-height:760px;padding:clamp(125px,15vh,180px) 7vw 60px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.heroCourt{position:absolute;inset:78px 0 0;pointer-events:none;opacity:.58}
+.heroCourt:before{content:"";position:absolute;left:7vw;right:7vw;top:50%;border-top:1px solid rgba(19,32,51,.12)}
+.courtVertical{position:absolute;left:72.5%;top:0;bottom:0;border-left:1px solid rgba(19,32,51,.13)}
+.courtHorizontal{position:absolute;left:72.5%;right:0;top:50%;border-top:1px solid rgba(19,32,51,.13)}
+.heroEyebrow{position:relative;z-index:2;margin-bottom:clamp(28px,4vh,48px)}
 .hero h1,.disruption h2,.principle h2,.darren h2,.live h2,.book h2,.final h2{font-size:clamp(72px,10vw,148px);line-height:.82;letter-spacing:-.075em;margin:0;font-weight:950}
+.hero h1{position:relative;z-index:2;font-size:clamp(92px,12.2vw,176px);line-height:.74;letter-spacing:-.085em;width:min-content}
+.hero h1>span{display:block}
 .dot,.principle h3 span,.live h2 span,.final h2 span{color:var(--lime)}
-.heroBall{position:absolute;right:10vw;top:42%}.heroBall .ball{width:120px;height:120px}
-.scroll{position:absolute;bottom:46px;font-size:12px;font-weight:900;letter-spacing:.12em}
-.vline{position:absolute;right:27%;top:0;height:100%;border-left:1px solid rgba(19,32,51,.13)}
-.disruption{min-height:1200px;padding:170px 7vw;position:relative;overflow:hidden}
-.disruption h2{font-size:clamp(58px,7.2vw,108px);margin-top:170px}.disruption em,.darren em,.book em{font-family:Georgia,serif;font-weight:400}
-.trajectory{position:absolute;height:2px;background:var(--navy)}.trajectory .ball{position:absolute;width:34px;height:34px;right:-17px;top:-16px}
-.straight{width:44vw;top:160px;left:7vw}.broken{width:32vw;right:5vw;top:650px;transform:rotate(24deg);transform-origin:right}
-.now{position:absolute;right:7vw;bottom:120px;text-align:right}.now span{display:block;font:italic 42px Georgia,serif}.now strong{display:block;font-size:clamp(70px,9vw,130px);letter-spacing:-.07em}
+.heroBall{position:absolute;z-index:3;right:11.5vw;top:39%}
+.heroBall .ball{width:clamp(88px,8.5vw,132px);height:clamp(88px,8.5vw,132px);animation:hero-arrive 1.05s cubic-bezier(.2,.8,.2,1) both}
+.heroAside{position:absolute;right:7vw;bottom:13%;margin:0;max-width:330px;font:italic clamp(18px,1.45vw,23px)/1.35 Georgia,serif}
+.scroll{position:absolute;left:7vw;bottom:44px;display:flex;gap:14px;align-items:center;font-size:11px;font-weight:900;letter-spacing:.14em}
+.scroll b{font-size:17px;animation:nudge 1.8s ease-in-out infinite}
+.disruption{min-height:1450px;padding:0 7vw;position:relative;overflow:hidden}
+.storyStage{position:relative;min-height:1450px;padding-top:240px}
+.expectedTrack{position:relative;width:58%;height:90px}
+.trackLabel{position:absolute;top:-28px;font-size:10px;font-weight:900;letter-spacing:.16em;color:var(--grey)}
+.trackLine{position:absolute;left:0;right:0;top:42px;border-top:2px solid var(--navy)}
+.trackBall{position:absolute;right:-18px;top:25px;width:36px;height:36px}
+.disruption h2{font-size:clamp(62px,7.5vw,112px);margin-top:170px;position:relative;z-index:2}
+.disruption em,.darren em,.book em{font-family:Georgia,serif;font-weight:400}
+.changeTrack{position:absolute;right:4%;top:760px;width:47%;height:300px}
+.changeLine{position:absolute;height:2px;background:var(--navy);transform-origin:left center}
+.changeLine.first{left:0;top:30px;width:48%;transform:rotate(17deg)}
+.bounceMark{position:absolute;left:45%;top:92px;font-size:17px;font-weight:900;color:var(--lime)}
+.changeLine.second{left:46%;top:104px;width:53%;transform:rotate(-31deg)}
+.changeBall{position:absolute;right:-7px;top:-2px;width:42px;height:42px}
+.now{position:absolute;right:0;bottom:130px;text-align:right}
+.now span{display:block;font:italic clamp(34px,3vw,48px) Georgia,serif;margin-bottom:6px}
+.now strong{display:block;font-size:clamp(82px,10vw,148px);line-height:.82;letter-spacing:-.075em}
+
+/* Existing V1 sections retained below the new opening */
 .principle{min-height:1100px;padding:170px 7vw;position:relative;overflow:hidden}.principle h2{font-size:clamp(64px,8.5vw,124px)}.principle h3{font-size:clamp(44px,6vw,84px);line-height:.9;letter-spacing:-.055em;margin:90px 0 50px}.quote{max-width:760px;font:italic 30px/1.3 Georgia,serif}.aside{color:#bfc3bf;margin-top:45px}.textLink{display:inline-block;margin-top:60px;border-bottom:2px solid var(--lime);padding-bottom:8px;font-weight:900;font-size:12px;letter-spacing:.1em}
 .courtFrame{position:absolute;right:-5vw;top:14%;width:38vw;height:72%;border:1px solid rgba(255,255,255,.12)}
 .darren{min-height:980px;padding:150px 7vw;display:grid;grid-template-columns:1.05fr .95fr;gap:8vw;align-items:center}.darren h2{font-size:clamp(68px,8vw,116px)}.darren .copy>p:not(.eyebrow){font:25px/1.45 Georgia,serif;max-width:650px}.path{margin-top:55px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12px;font-weight:900;letter-spacing:.06em}.path i{font-size:25px;color:var(--lime)}.dark{color:var(--navy)}.photoWrap{position:relative;height:680px;overflow:hidden}.photoWrap img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.02)}.photoBall{position:absolute;left:-23px;bottom:20%;width:70px;height:70px}
 .live{min-height:1000px;padding:160px 7vw;display:flex;flex-direction:column;justify-content:space-between}.live h2{font-size:clamp(68px,8.8vw,130px)}.liveBottom{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:end}.liveBottom h3{font-size:28px;margin:0 0 18px}.liveBottom p{font:24px/1.4 Georgia,serif;max-width:650px}.liveBottom small{letter-spacing:.12em}.large{padding:20px 25px}
 .book{min-height:800px;padding:160px 7vw}.book h2{font-size:clamp(62px,7.5vw,110px)}.bigQuestion{margin-top:100px;font:italic 30px Georgia,serif}
 .final{min-height:100svh;padding:150px 7vw;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.final h2{font-size:clamp(82px,11vw,160px)}.final>a{margin-top:70px;font-size:22px;border-bottom:2px solid var(--lime);align-self:flex-start}.final small{margin-top:30px;color:#aaa}.finalBall{position:absolute;right:8vw;top:13%;width:90px;height:90px}
+
+@keyframes hero-arrive{from{transform:translate(38vw,-22vh) scale(.7) rotate(-70deg);opacity:0}to{transform:translate(0,0) scale(1) rotate(0);opacity:1}}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
 @media(max-width:900px){
  .nav{height:64px;grid-template-columns:1fr auto;padding:0 22px}.navlinks{display:none}.nav .cta{font-size:10px;padding:12px}
- .hero{padding:120px 22px 40px;min-height:720px}.hero h1{font-size:20vw}.heroBall{right:9vw;top:28%}.heroBall .ball{width:68px;height:68px}.vline{right:18%}
- .disruption{padding:130px 22px;min-height:950px}.disruption h2{font-size:14vw;margin-top:150px}.straight{left:22px;width:58vw}.broken{top:570px;width:48vw}.now{right:22px;bottom:90px}.now strong{font-size:18vw}
+ .hero{padding:105px 22px 38px;min-height:720px;justify-content:center}.heroCourt{inset:64px 0 0}.courtVertical{left:73%}.courtHorizontal{left:73%}.hero h1{font-size:20.5vw;line-height:.77}.heroEyebrow{max-width:230px;line-height:1.5}.heroBall{right:7vw;top:31%}.heroBall .ball{width:68px;height:68px}.heroAside{right:22px;bottom:16%;font-size:16px;max-width:230px}.scroll{left:22px;bottom:32px}
+ .disruption{padding:0 22px;min-height:1120px}.storyStage{min-height:1120px;padding-top:150px}.expectedTrack{width:72%}.disruption h2{font-size:13.8vw;margin-top:125px}.changeTrack{top:610px;right:0;width:72%;height:230px}.now{right:0;bottom:90px}.now strong{font-size:18vw}
  .principle{padding:130px 22px;min-height:920px}.principle h2{font-size:15vw}.principle h3{font-size:11vw;margin-top:80px}.quote{font-size:24px}.courtFrame{right:-35%;width:80%}
  .darren{padding:120px 22px;grid-template-columns:1fr;gap:70px}.darren h2{font-size:17vw}.photoWrap{height:520px}.path{line-height:1.8}
  .live{padding:130px 22px;min-height:900px}.live h2{font-size:16vw}.liveBottom{grid-template-columns:1fr;align-items:start}.liveBottom .cta{justify-self:start}
  .book{padding:120px 22px;min-height:700px}.book h2{font-size:14vw}
  .final{padding:120px 22px}.final h2{font-size:19vw}.finalBall{width:55px;height:55px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.heroBall .ball,.scroll b{animation:none}}
