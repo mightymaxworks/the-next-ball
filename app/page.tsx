@@ -1,10 +1,12 @@
+import BallJourney from "./BallJourney";
+
 const Ball = ({ className = "" }: { className?: string }) => (
   <span className={`ball ${className}`} aria-hidden="true" />
 );
 
 export default function Home() {
   return (
-    <main>
+    <main>\n      <BallJourney />
       <nav className="nav">
         <a className="brand" href="#top">THE NEXT BALL <Ball className="navBall" /></a>
         <div className="navlinks">
@@ -21,7 +23,7 @@ export default function Home() {
         </div>
         <p className="eyebrow heroEyebrow">BETTER DECISIONS, ONE POINT AT A TIME.</p>
         <h1><span>THE</span><span>NEXT</span><span>BALL<span className="dot">.</span></span></h1>
-        <div className="heroBall"><Ball /></div>
+        <div className="heroBall ghostBall"><Ball /></div>
         <p className="heroAside">A way of thinking about decisions<br />when the plan stops being useful.</p>
         <a className="scroll" href="#disruption"><span>EXPLORE THE IDEA</span><b aria-hidden="true">↓</b></a>
       </section>
@@ -93,7 +95,7 @@ export default function Home() {
       </section>
 
       <section id="next-balls" className="final navy">
-        <Ball className="finalBall" />
+        <span className="finalLanding" aria-hidden="true" />
         <p className="eyebrow light">THE QUESTION THAT REMAINS</p>
         <h2>WHAT’S YOUR<br /><span>NEXT BALL?</span></h2>
         <a href="mailto:next@thenextball.com">next@thenextball.com</a>
