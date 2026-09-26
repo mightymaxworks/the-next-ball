@@ -225,3 +225,18 @@ a{color:inherit;text-decoration:none}.cream{background:var(--cream)}.navy{backgr
 .lifeStrip{grid-template-columns:1.35fr .65fr;gap:14px}
 .lifeStrip figure:nth-child(2){margin-top:72px}
 @media(max-width:900px){.lifeStrip{grid-template-columns:1fr}.lifeStrip figure:nth-child(1){margin-right:8vw}.lifeStrip figure:nth-child(2){margin:0 0 0 15vw}}
+
+/* Refinement 05 — person behind the idea: contained editorial image */
+.darren{min-height:860px;padding:130px 7vw;grid-template-columns:minmax(0,1.2fr) minmax(320px,.62fr);gap:6vw}
+.photoWrap{height:auto;aspect-ratio:3/2;align-self:center;overflow:visible}
+.photoWrap img{display:block;width:100%;height:100%;object-fit:cover;object-position:58% 50%;filter:saturate(.92) contrast(1.02)}
+.photoWrap:after{inset:0}
+.photoLabel{left:-18px;top:-18px}
+.photoCut{left:-24px;top:auto;bottom:22%;width:48px}
+.photoCaption{right:-26px;bottom:-42px;max-width:235px;padding:13px 15px;font-size:15px}
+@media(max-width:900px){
+ .darren{padding:100px 22px 125px;gap:55px}
+ .photoWrap{width:82%;max-width:520px;justify-self:end;aspect-ratio:3/2}
+ .photoLabel{left:-12px;top:-14px}
+ .photoCaption{right:0;bottom:-54px;max-width:210px}
+}
