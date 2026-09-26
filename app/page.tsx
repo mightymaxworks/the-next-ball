@@ -99,25 +99,25 @@ export default function Home() {
         <div className="perspectivePlay player">
           <div className="playNumber">01</div>
           <div className="playCopy"><p className="eyebrow">PLAYER</p><h3>WHAT DO I DO<br/>WITH THE BALL<br/><em>I’VE BEEN GIVEN?</em></h3></div>
-          <div className="playVisual pickleballVisual" aria-hidden="true"><span className="baseline"/><span className="net"/><span className="target">PLAY IT</span></div>
+          <div className="playVisual courtDiagram playerCourt" aria-hidden="true"><span className="courtNet"/><span className="kitchen top"/><span className="kitchen bottom"/><span className="courtPlayer near">●</span><span className="paddle nearPaddle">◐</span><span className="shotLine"/><span className="landingSpot">×</span><span className="diagramNote">YOUR BALL. YOUR DECISION.</span></div>
         </div>
 
         <div className="perspectivePlay coach">
           <div className="playNumber">02</div>
           <div className="playCopy"><p className="eyebrow">COACH</p><h3>HOW DO I HELP<br/>SOMEBODY ELSE<br/><em>SEE THE COURT?</em></h3></div>
-          <div className="playVisual coachVisual" aria-hidden="true"><span className="person one"/><span className="sightline"/><span className="person two"/><span className="target">SEE IT</span></div>
+          <div className="playVisual courtDiagram coachCourt" aria-hidden="true"><span className="courtNet"/><span className="kitchen top"/><span className="kitchen bottom"/><span className="courtPlayer coachMark">●</span><span className="courtPlayer athleteMark">●</span><span className="sightCone"/><span className="landingSpot">×</span><span className="diagramNote">HELP THEM SEE THE OPEN COURT.</span></div>
         </div>
 
         <div className="perspectivePlay entrepreneur">
           <div className="playNumber">03</div>
           <div className="playCopy"><p className="eyebrow">ENTREPRENEUR</p><h3>WHAT HAPPENS<br/>WHEN THE PLAN<br/><em>MEETS REALITY?</em></h3></div>
-          <div className="playVisual planVisual" aria-hidden="true"><span className="planStraight"/><span className="planBreak"/><span className="target">ADAPT</span></div>
+          <div className="playVisual decisionDiagram" aria-hidden="true"><div className="decisionPlan"><small>THE PLAN</small><span className="planArrow">→</span><b>EXPECTED</b></div><div className="realityHit"><span>×</span><small>REALITY</small></div><div className="decisionResponse"><span className="turnArrow">↘</span><b>ADAPT</b></div><p>Plans are useful.<br/>Until reality gets a vote.</p></div>
         </div>
 
         <div className="perspectivePlay investor">
           <div className="playNumber">04</div>
           <div className="playCopy"><p className="eyebrow">INVESTOR</p><h3>WHICH<br/>OPPORTUNITIES<br/><em>AREN’T WORTH CHASING?</em></h3></div>
-          <div className="playVisual investorVisual" aria-hidden="true"><span className="option a">A</span><span className="option b">B</span><span className="option c">C</span><span className="pass">LET IT GO.</span></div>
+          <div className="playVisual choiceDiagram" aria-hidden="true"><div className="incoming"><small>OPPORTUNITIES</small><span>●</span><span>●</span><span>●</span></div><div className="decisionGate"><b>DO I NEED<br/>TO HIT THIS?</b></div><div className="choiceOutcomes"><span className="hit">PLAY</span><span className="leave">LET IT GO.</span></div></div>
         </div>
 
         <div className="perspectiveOutro">
