@@ -67,3 +67,26 @@ a{color:inherit;text-decoration:none}.cream{background:var(--cream)}.navy{backgr
  .final{padding:120px 22px}.final h2{font-size:19vw}.finalBall{width:55px;height:55px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.heroBall .ball,.scroll b{animation:none}}
+
+
+/* Continuous Ball Journey — one decision moving through the whole page */
+.ballJourney{position:fixed;inset:0;z-index:14;pointer-events:none;overflow:hidden}
+.journeyBall{position:absolute;left:0;top:0;will-change:transform}
+.journeyBall .ball{width:58px;height:58px;box-shadow:0 12px 26px rgba(19,32,51,.13),inset -8px -8px 0 rgba(19,32,51,.06)}
+.journeyBall[data-phase="change"] .ball{animation:impact .34s cubic-bezier(.2,.9,.35,1)}
+.journeyBall[data-phase="question"] .ball{box-shadow:0 0 0 1px rgba(199,242,56,.16),0 16px 35px rgba(0,0,0,.18)}
+.journeyTrail{position:absolute;inset:0;width:100%;height:100%;opacity:.12}
+.journeyTrail path{fill:none;stroke:var(--navy);stroke-width:.18;vector-effect:non-scaling-stroke;transition:stroke .25s ease}
+.ghostBall{opacity:.12}
+.finalLanding{position:absolute;right:8vw;top:13%;width:90px;height:90px;border:1px dashed rgba(199,242,56,.22);border-radius:50%}
+@keyframes impact{0%{scale:1}45%{scale:1.18 .82}100%{scale:1}}
+@media(max-width:900px){
+ .journeyBall .ball{width:44px;height:44px}
+ .journeyTrail{opacity:.08}
+ .finalLanding{width:55px;height:55px}
+}
+@media(prefers-reduced-motion:reduce){
+ .ballJourney{display:none}
+ .ghostBall{opacity:1}
+ .finalLanding{background:var(--lime);border:0}
+}
