@@ -83,7 +83,7 @@ export default function Home() {
         </div>
         <div className="photoWrap">
           <span className="photoLabel">THE PERSON BEHIND THE IDEA</span>
-          <img src="/images/darren-person-behind-idea.jpeg" alt="Darren Ho" />
+          <img src="/images/selected/darren-person-behind-idea.jpeg" alt="Darren Ho" />
           <span className="photoCut" aria-hidden="true" />
           <p className="photoCaption">Four different courts.<br/>Same question: what do you do next?</p>
         </div>
