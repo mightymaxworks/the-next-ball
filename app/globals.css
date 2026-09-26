@@ -251,3 +251,18 @@ a{color:inherit;text-decoration:none}.cream{background:var(--cream)}.navy{backgr
  .liveTop{min-height:390px}
  .livePhoto{left:auto;right:0;top:105px;width:78vw;max-width:500px}
 }
+
+/* Refinement 07 — subtraction and hierarchy */
+.lifeStrip,.stageProof{display:none!important}
+.photoWrap{max-width:470px;justify-self:end}
+.livePhoto{width:min(32vw,430px)}
+.livePhoto figcaption{display:none}
+.perspectivePlay{min-height:620px}
+.playVisual{max-width:470px}
+.diagramNote,.decisionDiagram>p{display:none}
+@media(max-width:900px){
+ .photoWrap{width:76%;max-width:430px}
+ .livePhoto{width:72vw;max-width:420px}
+ .perspectivePlay{min-height:auto}
+ .playVisual{max-width:none}
+}
