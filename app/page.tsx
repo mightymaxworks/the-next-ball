@@ -87,11 +87,7 @@ export default function Home() {
           <span className="photoCut" aria-hidden="true" />
           <p className="photoCaption">Four different courts.<br/>Same question: what do you do next?</p>
         </div>
-        <div className="lifeStrip">
-          <figure><img src="/images/IMG_6862.jpeg" alt="Endurance sport" /><figcaption>ENDURANCE</figcaption></figure>
-          <figure><img src="/images/IMG_7483.jpeg" alt="Pickleball competition" /><figcaption>COMPETITION</figcaption></figure>
-          <figure><img src="/images/IMG_6947.jpeg" alt="Coaching through sport" /><figcaption>COACHING</figcaption></figure>
-        </div>
+
       </section>
 
       <section className="perspectives cream" aria-labelledby="perspectives-title">
