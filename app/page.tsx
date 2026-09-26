@@ -6,7 +6,8 @@ const Ball = ({ className = "" }: { className?: string }) => (
 
 export default function Home() {
   return (
-    <main>\n      <BallJourney />
+    <main>
+      <BallJourney />
       <nav className="nav">
         <a className="brand" href="#top">THE NEXT BALL <Ball className="navBall" /></a>
         <div className="navlinks">
@@ -62,6 +63,13 @@ export default function Home() {
         <a className="textLink" href="/the-idea">THE IDEA →</a>
       </section>
 
+      <section className="ideaToHuman cream" aria-label="From the idea to the person">
+        <p className="bridgeSmall">THE THEORY IS NEAT.</p>
+        <h2>LIFE<br/><em>WASN’T.</em></h2>
+        <p className="bridgeNote">Which is sort of the point.</p>
+        <span className="bridgeLine" aria-hidden="true" />
+      </section>
+
       <section id="darren" className="darren cream">
         <div className="copy">
           <p className="eyebrow">DARREN HO · AUTHOR · SPEAKER · COACH</p>
@@ -69,13 +77,15 @@ export default function Home() {
           <p>Looking backwards, life has a funny way of looking like a plan. Living through it mostly looked like figuring out what to do next.</p>
           <div className="path">
             <span>ENTREPRENEUR</span><i>→</i><span>147KG</span><i>↘</i><span>TRIATHLON</span><i>↗</i>
-            <span>WORLD CHAMPIONSHIPS</span><i>→</i><span>PICKLEBALL</span><i>↘</i><span>THE NEXT BALL</span>
+            <span>WORLD CHAMPIONSHIPS</span><i>→</i><span>PICKLEBALL</span><i>↘</i><span>THE NEXT BALL</span><b className="obviously">Obviously.</b>
           </div>
           <a className="textLink dark" href="/darren">MEET DARREN →</a>
         </div>
         <div className="photoWrap">
+          <span className="photoLabel">THE PERSON BEHIND THE IDEA</span>
           <img src="/images/IMG_5435.jpeg" alt="Darren Ho" />
-          <Ball className="photoBall" />
+          <span className="photoCut" aria-hidden="true" />
+          <p className="photoCaption">Four different courts.<br/>Same question: what do you do next?</p>
         </div>
       </section>
 
