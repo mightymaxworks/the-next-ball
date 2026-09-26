@@ -131,7 +131,8 @@ export default function Home() {
       <section id="speaking" className="live navy">
         <div className="liveTop">
           <p className="eyebrow light">THE NEXT BALL — LIVE</p>
-          <p className="stageAside">The ideas are serious.<br/>The delivery doesn’t have to be.</p>\n          <figure className="livePhoto"><img src="/images/selected/IMG_8932.JPEG" alt="Darren speaking at a live event" /><figcaption>THE NEXT BALL — LIVE</figcaption></figure>
+          <p className="stageAside">The ideas are serious.<br/>The delivery doesn’t have to be.</p>
+          <figure className="livePhoto"><img src="/images/selected/IMG_8932.JPEG" alt="Darren speaking at a live event" /><figcaption>THE NEXT BALL — LIVE</figcaption></figure>
         </div>
         <h2>SERIOUS IDEAS.<br /><span>NOT-SO-SERIOUS<br />DELIVERY.</span></h2>
         <div className="liveRule" aria-hidden="true"><span>LAUGH</span><i>→</i><span>STORY</span><i>→</i><span>INSIGHT</span><i>→</i><span>NEXT BALL</span></div>
